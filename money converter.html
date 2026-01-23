@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>money converter</title>
+</head>
+<style>
+    fieldset{
+        width: 500px;
+        height: 400px;
+        margin-top: 20px;
+        background-color: white;
+    }
+    input{
+        width: 150px;
+        height: 30px;
+    }
+    select{
+        width: 158px;
+        height: 33px;
+    }
+    button{
+        width: 158px;
+        height: 30px;
+        background-color: rgb(46, 46, 185);
+        border-color: rgb(46, 46, 185);
+    }
+    h1{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    #all{
+        width: 700px;
+        height: 200px;
+        background-color: rgb(9, 2, 36);
+        margin-top: 100px;
+    }
+    .xyz{
+        color: white;
+    }
+</style>
+<body>
+    <center>
+        <fieldset id="all">
+            <h1 class="xyz">xyz company</h1>
+    <fieldset>
+       <h1>convert money</h1>
+    <form id="form" name="form" onsubmit="return false">
+        <strong>amount</strong><br>
+    <input type="number" name="ayinjiye" id="ayinjiye" placeholder="amount">
+     <br><br>
+     <strong>francs</strong><br>
+    <select id="from" name="from">
+        <option>rwf</option>
+        <option>$</option>
+        <option>pounds</option>
+        <option>euro</option>
+        <option>kwaca</option>
+        <option>burundi</option>
+        <option>uganda</option>
+        <option>tanzania</option>
+        <option>congo</option>
+        <option>zambia</option>
+    </select><br><br>
+    <strong>change in</strong><br>
+    <select id="to" name="to">
+        <option>rwf</option>
+        <option>$</option>
+        <option>pounds</option>
+        <option>euro</option>
+        <option>kwaca</option>
+        <option>burundi</option>
+        <option>uganda</option>
+        <option>tanzania</option>
+        <option>congo</option>
+        <option>zambia</option>
+    </select>
+   <br><br>
+    <button id="convert" name="convert">convert</button>
+     <br><br>
+     <hr>
+   get answer: <span id="answer" name="answer"></span>
+    </form>
+    </fieldset>
+</fieldset>
+</center>
+</body>
+<script>
+    var from=document.getElementById("from");
+    var to=document.getElementById("to");
+    var money=document.getElementById("ayinjiye");
+    var form= document.querySelector("form")
+form.onsubmit=()=>{
+    if(from.value==to.value){
+        answer.innerHTML="currency equal";
+        answer.style.color="red";
+    }
+    if(money.value==""){
+        answer.innerHTML="insert the money";
+        answer.style.color="blue";
+    }
+    if(from.value=="$" & to.value=="rwf"){
+        answer.innerHTML=money.value*1000;
+    }
+    if(from.value=="pounds" & to.value=="rwf"){
+        answer.innerHTML=money.value*1300;
+    }
+    if(from.value=="euro" & to.value=="rwf"){
+        answer.innerHTML=money.value*1230;
+    }
+    if(from.value=="kwaca" & to.value=="rwf"){
+        answer.innerHTML=money.value*20;
+    }
+    if(from.value=="rwf" & to.value=="$"){
+        answer.innerHTML=money.value/1000;
+    }
+    if(from.value=="rwf" & to.value=="euro"){
+        answer.innerHTML=money.value/1230;
+    }
+    if(from.value=="rwf" & to.value=="pounds"){
+        answer.innerHTML=money.value/1300;
+    }
+    if(from.value=="rwf" & to.value=="kwaca"){
+        answer.innerHTML=money.value/20;
+    }
+    if(from.value=="rwf" & to.value=="burundi"){
+        answer.innerHTML=money.value*3;
+    }
+    if(from.value=="burundi" & to.value=="rwf"){
+        answer.innerHTML=money.value/3;
+    }
+    if(from.value=="rwf" & to.value=="uganda"){
+        answer.innerHTML=money.value*4;
+    }
+    if(from.value=="uganda" & to.value=="rwf"){
+        answer.innerHTML=money.value/4;
+    }
+    if(from.value=="rwf" & to.value=="tanzania"){
+        answer.innerHTML=money.value*2;
+    }
+    if(from.value=="tanzania" & to.value=="rwf"){
+        answer.innerHTML=money.value/2;
+    }
+    if(from.value=="rwf" & to.value=="congo"){
+        answer.innerHTML=money.value*8;
+    }
+    if(from.value=="congo" & to.value=="rwf"){
+        answer.innerHTML=money.value/8;
+    }
+    if(from.value=="rwf" & to.value=="zambia"){
+        answer.innerHTML=money.value/4;
+    }
+    if(from.value=="zambia" & to.value=="rwf"){
+        answer.innerHTML=money.value*4;
+    }
+    if(from.value=="$" & to.value=="euro"){
+        answer.innerHTML=money.value/20;
+    }
+    if(from.value=="burundi" & to.value=="rwf"){
+        answer.innerHTML=money.value*20;
+    }
+    if(from.value=="$" & to.value=="pounds"){
+        answer.innerHTML=money.value/30;
+    }
+    if(from.value=="pounds" & to.value=="$"){
+        answer.innerHTML=money.value*30;
+    }
+    if(from.value=="$" & to.value=="kwaca"){
+        answer.innerHTML=money.value*20000;
+    }
+    if(from.value=="kwaca" & to.value=="$"){
+        answer.innerHTML=money.value/20000;
+    }
+    if(from.value=="$" & to.value=="burundi"){
+        answer.innerHTML=money.value*3000;
+    }
+    if(from.value=="burundi" & to.value=="$"){
+        answer.innerHTML=money.value/3000;
+    }
+    if(from.value=="$" & to.value=="uganda"){
+        answer.innerHTML=money.value*4000;
+    }
+    if(from.value=="uganda" & to.value=="rwf"){
+        answer.innerHTML=money.value/4000;
+    }
+    if(from.value=="$" & to.value=="congo"){
+        answer.innerHTML=money.value*2000;
+    }
+    if(from.value=="congo" & to.value=="$"){
+        answer.innerHTML=money.value/2000;
+    }
+    if(from.value=="$" & to.value=="zambia"){
+        answer.innerHTML=money.value*4000;
+    }
+    if(from.value=="zambia" & to.value=="$"){
+        answer.innerHTML=money.value/20;
+    }
+    return false;
+}
+</script>
+</html>
